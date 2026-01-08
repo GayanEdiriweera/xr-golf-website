@@ -392,6 +392,26 @@ input {
   transition: opacity 0.1s ease-out;
 }
 
+/* Single Image Container */
+.image-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition-medium),
+    transform var(--transition-medium);
+}
+
+.image-container:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-4px);
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .visual-placeholder {
   aspect-ratio: 4 / 3;
   background: linear-gradient(

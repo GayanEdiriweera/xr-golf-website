@@ -146,6 +146,78 @@ function setupIntersectionObserver() {
   });
 }
 
+// Scroll-based blend effect for Blended Realities section
+function setupBlendEffect() {
+  const blendContainer = document.getElementById("blend-container");
+  const blendOverlay = document.getElementById("blend-overlay");
+
+  if (!blendContainer || !blendOverlay) return;
+
+  // Use Intersection Observer for performance
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          window.addEventListener("scroll", handleBlendScroll, {
+            passive: true,
+          });
+          handleBlendScroll(); // Initial call
+        } else {
+          window.removeEventListener("scroll", handleBlendScroll);
+        }
+      });
+    },
+    { threshold: 0, rootMargin: "100px" }
+  );
+
+  observer.observe(blendContainer);
+
+  let ticking = false;
+
+  function handleBlendScroll() {
+    if (ticking) return;
+
+    ticking = true;
+    requestAnimationFrame(() => {
+      const rect = blendContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calculate progress: 0 when container enters viewport, 1 when it reaches top quarter
+      // This creates a nice transition as you scroll through the section
+      const containerCenter = rect.top + rect.height / 2;
+      const viewportCenter = windowHeight / 2;
+
+      // Start transition when container is in lower half of viewport
+      // Complete when container center is at viewport center
+      const startPoint = windowHeight * 0.8;
+      const endPoint = windowHeight * 0.3;
+
+      let progress = 0;
+
+      if (containerCenter <= startPoint && containerCenter >= endPoint) {
+        progress = 1 - (containerCenter - endPoint) / (startPoint - endPoint);
+      } else if (containerCenter < endPoint) {
+        progress = 1;
+      }
+
+      // Apply easing for smoother feel
+      const easedProgress = easeInOutCubic(progress);
+
+      blendOverlay.style.opacity = easedProgress;
+
+      ticking = false;
+    });
+  }
+
+  // Easing function for smoother animation
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+}
+
 // Initialize intersection observer
 document.addEventListener("DOMContentLoaded", setupIntersectionObserver);
+
+// Initialize blend effect
+document.addEventListener("DOMContentLoaded", setupBlendEffect);
 

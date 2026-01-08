@@ -338,6 +338,40 @@ input {
   position: relative;
 }
 
+/* Blend Container for scroll-based image transition */
+.blend-container {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition-medium),
+    transform var(--transition-medium);
+}
+
+.blend-container:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-4px);
+}
+
+.blend-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blend-image--base {
+  z-index: 1;
+}
+
+.blend-image--overlay {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
 .visual-placeholder {
   aspect-ratio: 4 / 3;
   background: linear-gradient(

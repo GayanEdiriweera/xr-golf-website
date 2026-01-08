@@ -354,6 +354,26 @@ input {
   transform: translateY(-4px);
 }
 
+.blend-container--square {
+  aspect-ratio: 1 / 1;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .blend-container--square {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .blend-container--square {
+    aspect-ratio: 1 / 1;
+    max-width: 90vw;
+  }
+}
+
 .blend-image {
   position: absolute;
   inset: 0;

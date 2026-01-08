@@ -151,24 +151,18 @@
             data-aos-duration="800"
             data-aos-delay="200"
           >
-            <div class="visual-placeholder">
-              <div class="placeholder-content">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="64"
-                  height="64"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                <span>Depth Perception Demo</span>
-              </div>
+            <div class="blend-container blend-container--square" data-blend>
+              <img 
+                src="assets/images/section2_1.png" 
+                alt="Flat screen projection - limited depth" 
+                class="blend-image blend-image--base"
+              />
+              <img 
+                src="assets/images/section2_2.png" 
+                alt="XR view - true depth perception" 
+                class="blend-image blend-image--overlay"
+                data-blend-overlay
+              />
             </div>
           </div>
         </div>

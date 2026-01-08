@@ -146,73 +146,87 @@ function setupIntersectionObserver() {
   });
 }
 
-// Scroll-based blend effect for Blended Realities section
+// Scroll-based blend effect for multiple blend containers
 function setupBlendEffect() {
-  const blendContainer = document.getElementById("blend-container");
-  const blendOverlay = document.getElementById("blend-overlay");
+  const blendContainers = document.querySelectorAll("[data-blend]");
+  
+  if (blendContainers.length === 0) return;
 
-  if (!blendContainer || !blendOverlay) return;
+  // Also support the legacy id-based container
+  const legacyContainer = document.getElementById("blend-container");
+  if (legacyContainer && !legacyContainer.hasAttribute("data-blend")) {
+    legacyContainer.setAttribute("data-blend", "");
+    const legacyOverlay = document.getElementById("blend-overlay");
+    if (legacyOverlay) legacyOverlay.setAttribute("data-blend-overlay", "");
+  }
 
-  // Use Intersection Observer for performance
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          window.addEventListener("scroll", handleBlendScroll, {
-            passive: true,
-          });
-          handleBlendScroll(); // Initial call
-        } else {
-          window.removeEventListener("scroll", handleBlendScroll);
-        }
-      });
-    },
-    { threshold: 0, rootMargin: "100px" }
-  );
-
-  observer.observe(blendContainer);
-
+  const allContainers = document.querySelectorAll("[data-blend]");
+  const activeContainers = new Set();
   let ticking = false;
+
+  // Easing function for smoother animation
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
 
   function handleBlendScroll() {
     if (ticking) return;
 
     ticking = true;
     requestAnimationFrame(() => {
-      const rect = blendContainer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Calculate progress: 0 when container enters viewport, 1 when it reaches top quarter
-      // This creates a nice transition as you scroll through the section
-      const containerCenter = rect.top + rect.height / 2;
-      const viewportCenter = windowHeight / 2;
+      activeContainers.forEach((container) => {
+        const overlay = container.querySelector("[data-blend-overlay]");
+        if (!overlay) return;
 
-      // Start transition when container is in lower half of viewport
-      // Complete when container center is at viewport center
-      const startPoint = windowHeight * 0.8;
-      const endPoint = windowHeight * 0.3;
+        const rect = container.getBoundingClientRect();
+        const containerCenter = rect.top + rect.height / 2;
 
-      let progress = 0;
+        // Start transition when container is in lower half of viewport
+        // Complete when container center is at viewport center
+        const startPoint = windowHeight * 0.8;
+        const endPoint = windowHeight * 0.3;
 
-      if (containerCenter <= startPoint && containerCenter >= endPoint) {
-        progress = 1 - (containerCenter - endPoint) / (startPoint - endPoint);
-      } else if (containerCenter < endPoint) {
-        progress = 1;
-      }
+        let progress = 0;
 
-      // Apply easing for smoother feel
-      const easedProgress = easeInOutCubic(progress);
+        if (containerCenter <= startPoint && containerCenter >= endPoint) {
+          progress = 1 - (containerCenter - endPoint) / (startPoint - endPoint);
+        } else if (containerCenter < endPoint) {
+          progress = 1;
+        }
 
-      blendOverlay.style.opacity = easedProgress;
+        // Apply easing for smoother feel
+        const easedProgress = easeInOutCubic(progress);
+        overlay.style.opacity = easedProgress;
+      });
 
       ticking = false;
     });
   }
 
-  // Easing function for smoother animation
-  function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
+  // Use Intersection Observer for performance
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeContainers.add(entry.target);
+        } else {
+          activeContainers.delete(entry.target);
+        }
+      });
+
+      if (activeContainers.size > 0) {
+        window.addEventListener("scroll", handleBlendScroll, { passive: true });
+        handleBlendScroll(); // Initial call
+      } else {
+        window.removeEventListener("scroll", handleBlendScroll);
+      }
+    },
+    { threshold: 0, rootMargin: "100px" }
+  );
+
+  allContainers.forEach((container) => observer.observe(container));
 }
 
 // Initialize intersection observer

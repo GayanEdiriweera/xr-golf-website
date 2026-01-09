@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Confirmed - xr.golf</title>
+    <meta
+      name="description"
+      content="Your subscription to xr.golf has been confirmed. Welcome to the future of immersive golf simulation."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Confirmation Page Specific Styles */
+      .confirm-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--container-padding);
+        background: radial-gradient(
+          ellipse at center top,
+          var(--color-bg-tertiary) 0%,
+          var(--color-bg-primary) 60%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .confirm-page::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          var(--color-accent-glow) 0%,
+          transparent 70%
+        );
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      .confirm-content {
+        text-align: center;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .confirm-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--color-accent) 0%,
+          var(--color-accent-hover) 100%
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 60px var(--color-accent-glow),
+          0 0 100px var(--color-accent-glow);
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 60px var(--color-accent-glow),
+            0 0 100px var(--color-accent-glow);
+        }
+        50% {
+          box-shadow: 0 0 80px var(--color-accent-glow),
+            0 0 120px var(--color-accent-glow);
+        }
+      }
+
+      .confirm-icon svg {
+        width: 50px;
+        height: 50px;
+        color: var(--color-bg-primary);
+        stroke-width: 3;
+      }
+
+      .confirm-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+          135deg,
+          var(--color-text-primary) 0%,
+          var(--color-text-secondary) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .confirm-message {
+        font-size: 1.25rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+      }
+
+      .confirm-message strong {
+        color: var(--color-accent);
+        font-weight: 500;
+      }
+
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 32px;
+        background: var(--color-bg-tertiary);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-primary);
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: var(--radius-xl);
+        transition: all var(--transition-medium);
+      }
+
+      .back-button:hover {
+        background: var(--color-bg-accent);
+        border-color: var(--color-border-hover);
+        transform: translateY(-2px);
+      }
+
+      .back-button svg {
+        transition: transform var(--transition-medium);
+      }
+
+      .back-button:hover svg {
+        transform: translateX(-4px);
+      }
+
+      .confirm-footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .confirm-logo {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-text-muted);
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="confirm-page">
+      <div class="confirm-content">
+        <div class="confirm-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h1 class="confirm-title">You're In!</h1>
+
+        <p class="confirm-message">
+          Your subscription has been <strong>confirmed</strong>. You'll now
+          receive updates on new developments, launches, and opportunities in XR
+          golf simulation.
+        </p>
+
+        <a href="index.html" class="back-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <div class="confirm-footer">
+          <span class="confirm-logo">xr.golf</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+

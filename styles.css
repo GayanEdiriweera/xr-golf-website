@@ -734,3 +734,88 @@ body::before {
   color: var(--color-bg-primary);
 }
 
+/* ========================================
+   Kit (ConvertKit) Form Styles
+   ======================================== */
+
+/* Alert Messages */
+.formkit-alert {
+  list-style: none;
+  padding: 16px 24px;
+  margin: 0 auto 20px;
+  max-width: 500px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.formkit-alert:empty {
+  display: none;
+}
+
+.formkit-alert-success {
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.formkit-alert-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #f87171;
+}
+
+/* Loading Spinner */
+.formkit-spinner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.formkit-spinner > div {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-bg-primary);
+  border-radius: 100%;
+  animation: formkit-bounce 1.4s infinite ease-in-out both;
+}
+
+.formkit-spinner > div:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.formkit-spinner > div:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes formkit-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Button loading state */
+.submit-button {
+  position: relative;
+}
+
+.submit-button[data-active] .formkit-spinner {
+  display: flex;
+}
+
+.submit-button[data-active] > span,
+.submit-button[data-active] > svg {
+  opacity: 0;
+}
+

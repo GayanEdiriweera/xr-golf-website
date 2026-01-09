@@ -9,6 +9,15 @@
       content="Experience immersive golf simulation with cutting-edge virtual reality technology. Blended realities, true depth perception, and optimal simulation in any space."
     />
 
+    <!-- Preload Hero Image -->
+    <link
+      rel="preload"
+      href="assets/images/hero.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,9 +39,12 @@
     <section class="hero" id="hero">
       <div class="hero-background">
         <img
-          src="assets/images/hero.png"
+          src="assets/images/hero.webp"
           alt="XR Golf Simulation"
           class="hero-image"
+          loading="eager"
+          fetchpriority="high"
+          onload="this.classList.add('loaded')"
         />
         <div class="hero-overlay"></div>
       </div>
@@ -109,12 +121,12 @@
           >
             <div class="blend-container" id="blend-container">
               <img
-                src="assets/images/section1_1.png"
+                src="assets/images/section1_1.webp"
                 alt="Physical reality - golf ball in real world"
                 class="blend-image blend-image--base"
               />
               <img
-                src="assets/images/section1_2.png"
+                src="assets/images/section1_2.webp"
                 alt="Virtual reality - golf ball in simulation"
                 class="blend-image blend-image--overlay"
                 id="blend-overlay"
@@ -157,12 +169,12 @@
           >
             <div class="blend-container blend-container--square" data-blend>
               <img
-                src="assets/images/section2_1.png"
+                src="assets/images/section2_1.webp"
                 alt="Flat screen projection - limited depth"
                 class="blend-image blend-image--base"
               />
               <img
-                src="assets/images/section2_2.png"
+                src="assets/images/section2_2.webp"
                 alt="XR view - true depth perception"
                 class="blend-image blend-image--overlay"
                 data-blend-overlay
@@ -202,7 +214,7 @@
           >
             <div class="image-container">
               <img
-                src="assets/images/section_3.png"
+                src="assets/images/section_3.webp"
                 alt="XR golf simulation in a compact space"
                 class="feature-image"
               />
@@ -264,7 +276,7 @@
           >
             <div class="image-container">
               <img
-                src="assets/images/section4.png"
+                src="assets/images/section4.webp"
                 alt="Putt Dojo - XR putting simulator"
                 class="feature-image"
               />

@@ -204,6 +204,29 @@ input {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  opacity: 0;
+  animation: scrollIndicatorFadeIn 1s ease-out 1s;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-indicator.animated {
+  opacity: 1;
+}
+
+.scroll-indicator.hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+@keyframes scrollIndicatorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .mouse {

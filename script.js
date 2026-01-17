@@ -110,18 +110,21 @@ function setupScrollIndicator() {
   const scrollIndicator = document.querySelector(".scroll-indicator");
   if (!scrollIndicator) return;
 
-  let hidden = false;
+  // Only start listening for scroll after the initial animation completes
+  scrollIndicator.addEventListener("animationend", () => {
+    scrollIndicator.classList.add("animated");
 
-  window.addEventListener("scroll", () => {
-    if (!hidden && window.pageYOffset > 100) {
-      scrollIndicator.style.opacity = "0";
-      scrollIndicator.style.transform = "translateX(-50%) translateY(20px)";
-      hidden = true;
-    } else if (hidden && window.pageYOffset <= 100) {
-      scrollIndicator.style.opacity = "1";
-      scrollIndicator.style.transform = "translateX(-50%) translateY(0)";
-      hidden = false;
-    }
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (window.scrollY > 100) {
+          scrollIndicator.classList.add("hidden");
+        } else {
+          scrollIndicator.classList.remove("hidden");
+        }
+      },
+      { passive: true }
+    );
   });
 }
 
@@ -149,7 +152,7 @@ function setupIntersectionObserver() {
 // Scroll-based blend effect for multiple blend containers
 function setupBlendEffect() {
   const blendContainers = document.querySelectorAll("[data-blend]");
-  
+
   if (blendContainers.length === 0) return;
 
   // Also support the legacy id-based container

@@ -156,7 +156,8 @@ input {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: var(--color-text-primary);
-  text-shadow: 0 0 60px rgba(255, 255, 255, 0.15),
+  text-shadow:
+    0 0 60px rgba(255, 255, 255, 0.15),
     0 0 120px rgba(74, 222, 128, 0.1);
 }
 
@@ -197,6 +198,29 @@ input {
   transform: translateX(4px);
 }
 
+/* Secondary CTA Button (for hero discover more) */
+.cta-button--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-hover);
+  box-shadow: none;
+}
+
+.cta-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.cta-button--secondary svg {
+  transition: transform var(--transition-medium);
+}
+
+.cta-button--secondary:hover svg {
+  transform: translateY(4px);
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
@@ -207,6 +231,25 @@ input {
   opacity: 0;
   animation: scrollIndicatorFadeIn 1s ease-out 1s;
   transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.scroll-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color var(--transition-medium);
+}
+
+.scroll-indicator:hover .scroll-text {
+  color: var(--color-text-secondary);
 }
 
 .scroll-indicator.animated {
@@ -367,7 +410,8 @@ input {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  transition: border-color var(--transition-medium),
+  transition:
+    border-color var(--transition-medium),
     transform var(--transition-medium);
 }
 
@@ -419,7 +463,8 @@ input {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  transition: border-color var(--transition-medium),
+  transition:
+    border-color var(--transition-medium),
     transform var(--transition-medium);
 }
 
@@ -962,8 +1007,10 @@ body::before {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  transition: transform var(--transition-medium),
-    border-color var(--transition-medium), box-shadow var(--transition-medium);
+  transition:
+    transform var(--transition-medium),
+    border-color var(--transition-medium),
+    box-shadow var(--transition-medium);
 }
 
 .press-asset-card:hover {
@@ -1019,7 +1066,8 @@ body::before {
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast),
+  transition:
+    background var(--transition-fast),
     transform var(--transition-fast);
 }
 
@@ -1044,7 +1092,9 @@ body::before {
   font-weight: 600;
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast), color var(--transition-fast),
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
     transform var(--transition-fast);
 }
 

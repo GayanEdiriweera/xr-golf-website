@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,64 +12,79 @@
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="XR Golf" />
-    <meta name="keywords" content="VR golf, virtual reality golf, golf simulator, XR golf, golf simulation, Putt Dojo, immersive golf, stereoscopic golf" />
+    <meta
+      name="keywords"
+      content="VR golf, virtual reality golf, golf simulator, XR golf, golf simulation, Putt Dojo, immersive golf, stereoscopic golf"
+    />
     <link rel="canonical" href="https://xr.golf/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://xr.golf/" />
     <meta property="og:title" content="XR Golf - Virtual Reality, Real Golf" />
-    <meta property="og:description" content="Experience immersive golf simulation with cutting-edge virtual reality technology. Blended realities, true depth perception, and optimal simulation in any space." />
-    <meta property="og:image" content="https://xr.golf/assets/images/hero.webp" />
+    <meta
+      property="og:description"
+      content="Experience immersive golf simulation with cutting-edge virtual reality technology. Blended realities, true depth perception, and optimal simulation in any space."
+    />
+    <meta
+      property="og:image"
+      content="https://xr.golf/assets/images/hero.webp"
+    />
     <meta property="og:site_name" content="XR Golf" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://xr.golf/" />
     <meta name="twitter:title" content="XR Golf - Virtual Reality, Real Golf" />
-    <meta name="twitter:description" content="Experience immersive golf simulation with cutting-edge virtual reality technology. Blended realities, true depth perception, and optimal simulation in any space." />
-    <meta name="twitter:image" content="https://xr.golf/assets/images/hero.webp" />
+    <meta
+      name="twitter:description"
+      content="Experience immersive golf simulation with cutting-edge virtual reality technology. Blended realities, true depth perception, and optimal simulation in any space."
+    />
+    <meta
+      name="twitter:image"
+      content="https://xr.golf/assets/images/hero.webp"
+    />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "XR Golf",
-      "url": "https://xr.golf",
-      "logo": "https://xr.golf/assets/images/apple-touch-icon.png",
-      "description": "Experience immersive golf simulation with cutting-edge virtual reality technology.",
-      "email": "contact@xr.golf",
-      "sameAs": []
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "XR Golf",
-      "url": "https://xr.golf",
-      "description": "Virtual Reality Golf Simulation",
-      "publisher": {
+      {
+        "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "XR Golf"
+        "name": "XR Golf",
+        "url": "https://xr.golf",
+        "logo": "https://xr.golf/assets/images/apple-touch-icon.png",
+        "description": "Experience immersive golf simulation with cutting-edge virtual reality technology.",
+        "email": "contact@xr.golf",
+        "sameAs": []
       }
-    }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Putt Dojo",
-      "applicationCategory": "GameApplication",
-      "operatingSystem": "VR",
-      "description": "XR putting simulator that redefines what's possible on the virtual green.",
-      "url": "https://puttdojo.com",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "XR Golf",
+        "url": "https://xr.golf",
+        "description": "Virtual Reality Golf Simulation",
+        "publisher": {
+          "@type": "Organization",
+          "name": "XR Golf"
+        }
       }
-    }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Putt Dojo",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "VR",
+        "description": "XR putting simulator that redefines what's possible on the virtual green.",
+        "url": "https://puttdojo.com",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      }
     </script>
 
     <!-- Favicon -->
@@ -119,307 +134,234 @@
   </head>
   <body>
     <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-background">
-        <img
-          src="assets/images/hero.webp"
-          alt="XR Golf Simulation"
-          class="hero-image"
-          loading="eager"
-          fetchpriority="high"
-          onload="this.classList.add('loaded')"
-        />
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
-          xr.golf
-        </h1>
-        <p
-          class="hero-tagline"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="200"
-        >
-          Virtual Reality, Real Golf
-        </p>
-        <a
-          href="#signup"
-          class="cta-button"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="350"
-        >
-          <span>Stay Updated</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-      </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-background">
+          <img
+            src="assets/images/hero.webp"
+            alt="XR Golf Simulation"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+            onload="this.classList.add('loaded')"
+          />
+          <div class="hero-overlay"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Section 1: Blended Realities -->
-    <section class="feature-section" id="blended-realities">
-      <div class="container">
-        <div class="feature-grid">
-          <div
-            class="feature-content"
-            data-aos="fade-right"
-            data-aos-duration="800"
-          >
-            <span class="section-label">01</span>
-            <h2 class="section-title">Blended Realities</h2>
-            <p class="section-text">
-              The way golf simulation should be. The XR Golf simulation approach
-              is designed to create a powerful illusion—your real swing connects
-              with a real ball, which appears to travel seamlessly from the real
-              world into a detailed virtual landscape.
-            </p>
-            <p class="section-text">
-              A bridge between worlds, where the tactile satisfaction of a real
-              strike meets the boundless possibilities of virtual environments.
-            </p>
-          </div>
-          <div
-            class="feature-visual"
-            data-aos="fade-left"
-            data-aos-duration="800"
+        <div class="hero-content">
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+            xr.golf
+          </h1>
+          <p
+            class="hero-tagline"
+            data-aos="fade-up"
+            data-aos-duration="1000"
             data-aos-delay="200"
           >
-            <div class="blend-container" id="blend-container">
-              <img
-                src="assets/images/section1_1.webp"
-                alt="Physical reality - golf ball in real world"
-                class="blend-image blend-image--base"
-              />
-              <img
-                src="assets/images/section1_2.webp"
-                alt="Virtual reality - golf ball in simulation"
-                class="blend-image blend-image--overlay"
-                id="blend-overlay"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: True Depth Perception -->
-    <section class="feature-section feature-section--alt" id="depth-perception">
-      <div class="container">
-        <div class="feature-grid feature-grid--reverse">
-          <div
-            class="feature-content"
-            data-aos="fade-left"
-            data-aos-duration="800"
-          >
-            <span class="section-label">02</span>
-            <h2 class="section-title">True Depth Perception</h2>
-            <p class="section-text">
-              XR Golf simulation delivers genuine stereoscopic and parallax
-              depth perception. Your senses work naturally—judging distance and
-              perceiving elevation changes exactly as they would on a real
-              course.
-            </p>
-            <p class="section-text">
-              This authentic spatial awareness transforms every shot. Club
-              selection becomes intuitive. Approach shots feel real. Judge
-              distance with confidence, using your natural depth perception
-              rather than guessing from a flat projection image.
-            </p>
-          </div>
-          <div
-            class="feature-visual"
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="blend-container blend-container--square" data-blend>
-              <img
-                src="assets/images/section2_1.webp"
-                alt="Flat screen projection - limited depth"
-                class="blend-image blend-image--base"
-              />
-              <img
-                src="assets/images/section2_2.webp"
-                alt="XR view - true depth perception"
-                class="blend-image blend-image--overlay"
-                data-blend-overlay
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Smaller Space -->
-    <section class="feature-section" id="smaller-space">
-      <div class="container">
-        <div class="feature-grid">
-          <div
-            class="feature-content"
-            data-aos="fade-right"
-            data-aos-duration="800"
-          >
-            <span class="section-label">03</span>
-            <h2 class="section-title">Optimal Simulation in a Smaller Space</h2>
-            <p class="section-text">
-              XR Golf technology breaks free from physical constraints,
-              delivering an expansive virtual environment in surprisingly
-              compact spaces.
-            </p>
-            <p class="section-text">
-              If you can swing, you can sim. No compromises on screen size or
-              alignment. Premium simulation is no longer limited to those with
-              dedicated simulator rooms.
-            </p>
-          </div>
-          <div
-            class="feature-visual"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="image-container">
-              <img
-                src="assets/images/section3.webp"
-                alt="XR Golf simulation in a compact space"
-                class="feature-image"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Putt Dojo -->
-    <section class="feature-section feature-section--highlight" id="putt-dojo">
-      <div class="container">
-        <div class="feature-grid feature-grid--reverse">
-          <div
-            class="feature-content"
-            data-aos="fade-left"
-            data-aos-duration="800"
-          >
-            <span class="section-label">04</span>
-            <h2 class="section-title">First on the Green</h2>
-            <p class="section-text">
-              Traditional simulators have never cracked putting—so we made it
-              our first challenge. Putt Dojo is live, it's in players' hands,
-              and it's redefining what's possible on the virtual green.
-            </p>
-            <p class="section-text">
-              This is just the beginning. Putt Dojo represents the first step on
-              our journey to revolutionize how golfers practice, play, and
-              experience the game they love.
-            </p>
-            <a
-              href="https://puttdojo.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="feature-link"
-            >
-              <span>Discover Putt Dojo</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
-          </div>
-          <div
-            class="feature-visual"
-            data-aos="fade-right"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="image-container">
-              <img
-                src="assets/images/section4.webp"
-                alt="Putt Dojo - XR putting simulator"
-                class="feature-image"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom Section: Signup & Contact -->
-    <section class="signup-section" id="signup">
-      <div class="container">
-        <div class="signup-content" data-aos="fade-up" data-aos-duration="800">
-          <h2 class="signup-title">Stay in the Loop</h2>
-          <p class="signup-text">
-            Be the first to know about new developments, launches, and
-            opportunities in XR Golf simulation.
+            Virtual Reality, Real Golf
           </p>
-
-          <form
-            class="signup-form seva-form formkit-form"
-            id="signup-form"
-            action="https://app.kit.com/forms/8957334/subscriptions"
-            method="post"
-            data-sv-form="8957334"
-            data-uid="d6a34ca1c7"
-            data-format="inline"
-            data-version="5"
-            data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+          <a
+            href="#signup"
+            class="cta-button"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="350"
           >
-            <!-- Kit Alert Messages -->
-            <ul
-              class="formkit-alert formkit-alert-error"
-              data-element="errors"
-              data-group="alert"
-            ></ul>
-            <ul
-              class="formkit-alert formkit-alert-success"
-              data-element="success"
-              data-group="alert"
-            ></ul>
+            <span>Stay Updated</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </div>
+      </section>
 
-            <div class="form-group" data-element="fields" data-stacked="false">
-              <input
-                type="email"
-                id="email"
-                name="email_address"
-                placeholder="Enter your email"
-                aria-label="Email Address"
-                required
-              />
-              <button type="submit" class="submit-button" data-element="submit">
-                <div class="formkit-spinner">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <span>Subscribe</span>
+      <!-- Section 1: Blended Realities -->
+      <section class="feature-section" id="blended-realities">
+        <div class="container">
+          <div class="feature-grid">
+            <div
+              class="feature-content"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              <span class="section-label">01</span>
+              <h2 class="section-title">Blended Realities</h2>
+              <p class="section-text">
+                The way golf simulation should be. The XR Golf simulation
+                approach is designed to create a powerful illusion—your real
+                swing connects with a real ball, which appears to travel
+                seamlessly from the real world into a detailed virtual
+                landscape.
+              </p>
+              <p class="section-text">
+                A bridge between worlds, where the tactile satisfaction of a
+                real strike meets the boundless possibilities of virtual
+                environments.
+              </p>
+            </div>
+            <div
+              class="feature-visual"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <div class="blend-container" id="blend-container">
+                <img
+                  src="assets/images/section1_1.webp"
+                  alt="Physical reality - golf ball in real world"
+                  class="blend-image blend-image--base"
+                />
+                <img
+                  src="assets/images/section1_2.webp"
+                  alt="Virtual reality - golf ball in simulation"
+                  class="blend-image blend-image--overlay"
+                  id="blend-overlay"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: True Depth Perception -->
+      <section
+        class="feature-section feature-section--alt"
+        id="depth-perception"
+      >
+        <div class="container">
+          <div class="feature-grid feature-grid--reverse">
+            <div
+              class="feature-content"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
+              <span class="section-label">02</span>
+              <h2 class="section-title">True Depth Perception</h2>
+              <p class="section-text">
+                XR Golf simulation delivers genuine stereoscopic and parallax
+                depth perception. Your senses work naturally—judging distance
+                and perceiving elevation changes exactly as they would on a real
+                course.
+              </p>
+              <p class="section-text">
+                This authentic spatial awareness transforms every shot. Club
+                selection becomes intuitive. Approach shots feel real. Judge
+                distance with confidence, using your natural depth perception
+                rather than guessing from a flat projection image.
+              </p>
+            </div>
+            <div
+              class="feature-visual"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <div class="blend-container blend-container--square" data-blend>
+                <img
+                  src="assets/images/section2_1.webp"
+                  alt="Flat screen projection - limited depth"
+                  class="blend-image blend-image--base"
+                />
+                <img
+                  src="assets/images/section2_2.webp"
+                  alt="XR view - true depth perception"
+                  class="blend-image blend-image--overlay"
+                  data-blend-overlay
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Smaller Space -->
+      <section class="feature-section" id="smaller-space">
+        <div class="container">
+          <div class="feature-grid">
+            <div
+              class="feature-content"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
+              <span class="section-label">03</span>
+              <h2 class="section-title">
+                Optimal Simulation in a Smaller Space
+              </h2>
+              <p class="section-text">
+                XR Golf technology breaks free from physical constraints,
+                delivering an expansive virtual environment in surprisingly
+                compact spaces.
+              </p>
+              <p class="section-text">
+                If you can swing, you can sim. No compromises on screen size or
+                alignment. Premium simulation is no longer limited to those with
+                dedicated simulator rooms.
+              </p>
+            </div>
+            <div
+              class="feature-visual"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <div class="image-container">
+                <img
+                  src="assets/images/section3.webp"
+                  alt="XR Golf simulation in a compact space"
+                  class="feature-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Putt Dojo -->
+      <section
+        class="feature-section feature-section--highlight"
+        id="putt-dojo"
+      >
+        <div class="container">
+          <div class="feature-grid feature-grid--reverse">
+            <div
+              class="feature-content"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
+              <span class="section-label">04</span>
+              <h2 class="section-title">First on the Green</h2>
+              <p class="section-text">
+                Traditional simulators have never cracked putting—so we made it
+                our first challenge. Putt Dojo is live, it's in players' hands,
+                and it's redefining what's possible on the virtual green.
+              </p>
+              <p class="section-text">
+                This is just the beginning. Putt Dojo represents the first step
+                on our journey to revolutionize how golfers practice, play, and
+                experience the game they love.
+              </p>
+              <a
+                href="https://puttdojo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="feature-link"
+              >
+                <span>Discover Putt Dojo</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -431,45 +373,140 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
-              </button>
+              </a>
             </div>
-          </form>
-        </div>
-
-        <div
-          class="contact-section"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="200"
-        >
-          <h3 class="contact-title">
-            Business enquiries, questions, or feedback?
-          </h3>
-          <a href="mailto:contact@xr.golf" class="contact-email">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <div
+              class="feature-visual"
+              data-aos="fade-right"
+              data-aos-duration="800"
+              data-aos-delay="200"
             >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              ></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span>contact@xr.golf</span>
-          </a>
+              <div class="image-container">
+                <img
+                  src="assets/images/section4.webp"
+                  alt="Putt Dojo - XR putting simulator"
+                  class="feature-image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Bottom Section: Signup & Contact -->
+      <section class="signup-section" id="signup">
+        <div class="container">
+          <div
+            class="signup-content"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <h2 class="signup-title">Stay in the Loop</h2>
+            <p class="signup-text">
+              Be the first to know about new developments, launches, and
+              opportunities in XR Golf simulation.
+            </p>
+
+            <form
+              class="signup-form seva-form formkit-form"
+              id="signup-form"
+              action="https://app.kit.com/forms/8957334/subscriptions"
+              method="post"
+              data-sv-form="8957334"
+              data-uid="d6a34ca1c7"
+              data-format="inline"
+              data-version="5"
+              data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+            >
+              <!-- Kit Alert Messages -->
+              <ul
+                class="formkit-alert formkit-alert-error"
+                data-element="errors"
+                data-group="alert"
+              ></ul>
+              <ul
+                class="formkit-alert formkit-alert-success"
+                data-element="success"
+                data-group="alert"
+              ></ul>
+
+              <div
+                class="form-group"
+                data-element="fields"
+                data-stacked="false"
+              >
+                <input
+                  type="email"
+                  id="email"
+                  name="email_address"
+                  placeholder="Enter your email"
+                  aria-label="Email Address"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="submit-button"
+                  data-element="submit"
+                >
+                  <div class="formkit-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <span>Subscribe</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="contact-section"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <h3 class="contact-title">
+              Business enquiries, questions, or feedback?
+            </h3>
+            <a href="mailto:contact@xr.golf" class="contact-email">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>contact@xr.golf</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->

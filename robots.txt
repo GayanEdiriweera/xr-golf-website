@@ -1,0 +1,10 @@
+# robots.txt for xr.golf
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://xr.golf/sitemap.xml
+
+# Disallow admin or private areas (if any)
+# Disallow: /private/
